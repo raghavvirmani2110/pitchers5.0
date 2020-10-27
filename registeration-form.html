@@ -15,6 +15,11 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/form-style.css">
+    <style>
+        h2 span{
+            color: #dd0a37;
+        }
+    </style>
 </head>
 <body>
 
@@ -25,7 +30,7 @@
             <div class="container">
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Registration Form</h2>
+                        <h2 class="form-title">Registration <span>Form</span></h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Name"/>
                         </div>
@@ -49,15 +54,15 @@
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>-->
-                        <a href="#" class="main-btn">Register</a>
+                        <a href="#" class="main-btn" style="text-decoration: none;">Register</a>
                         <div class="form-group">
                             <!--<input type="submit" name="submit" id="submit" class="form-submit" value="Register"/>-->
                             
                         </div>
                     </form>
-                    <p class="loginhere">
+                    <!-- <p class="loginhere">
                         Have already an account ? <a href="#" class="loginhere-link">Login here</a>
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </section>
