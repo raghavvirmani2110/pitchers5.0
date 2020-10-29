@@ -140,7 +140,7 @@
 
 							<div class="col-md-3 col-sm-3 col-xs-6">
 								<div class="number">
-									<h3><span class="counter" data-from="0" data-to="10" data-speed="2500">0</span>
+									<h3 id="day">
 									</h3>
 									<p>Days</p>
 								</div>
@@ -149,7 +149,7 @@
 
 							<div class="col-md-3 col-sm-3 col-xs-6">
 								<div class="number">
-									<h3><span class="counter" data-from="0" data-to="22" data-speed="2500">0</span>
+									<h3 id="hour">
 									</h3>
 									<p>Hours</p>
 								</div>
@@ -158,7 +158,7 @@
 
 							<div class="col-md-3 col-sm-3 col-xs-6">
 								<div class="number">
-									<h3><span class="counter" data-from="0" data-to="59" data-speed="2500">0</span>
+									<h3 id="minute">
 									</h3>
 									<p>Minutes</p>
 								</div>
@@ -167,13 +167,42 @@
 
 							<div class="col-md-3 col-sm-3 col-xs-6">
 								<div class="number">
-									<h3><span class="counter" data-from="0" data-to="20" data-speed="2500">0</span>
+									<h3 id="second">
 									</h3>
 									<p>Seconds</p>
 								</div>
 							</div>
 
 						</div>
+						<script>
+							function countdown() {
+								var now = new Date();
+								var over_time = new Date("November 08, 2020 09:00:00");
+				
+								var now_time = now.getTime();
+								var over = over_time.getTime();
+								var end_time = over - now_time;
+				
+								var days = Math.floor(end_time / (1000 * 60 * 60 * 24));
+								var hours = Math.floor((end_time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								var minutes = Math.floor((end_time % (1000 * 60 * 60)) / (1000 * 60));
+								var seconds = Math.floor((end_time % (1000 * 60)) / 1000);
+								if (hours < "10") { hours = "0" + hours; }
+								if (minutes < "10") { minutes = "0" + minutes; }
+								if (seconds < "10") { seconds = "0" + seconds; } 
+				
+								console.log(days)
+							
+								document.getElementById("day").innerHTML = days;
+								document.getElementById("hour").innerHTML = hours;
+								document.getElementById("minute").innerHTML = minutes;
+								document.getElementById("second").innerHTML = seconds;
+				
+								setTimeout(countdown, 1000);
+				
+							}
+							countdown();
+						</script>
 
 					</div>
 
