@@ -2,671 +2,914 @@
 <html lang="en">
 
 <!-- Mirrored from colorlib.com/preview/theme/event/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Oct 2020 16:41:06 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Event HTML Template</title>
+	<title>Pitchers 5.0</title>
 
-<style id="" media="all">@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://colorlib.com/fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJfedg.eot);
-}
-</style>
+	<style id="" media="all">
+		@font-face {
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 400;
+			src: url(https://colorlib.com/fonts.gstatic.com/s/poppins/v13/pxiEyp8kv8JHgFVrJJfedg.eot);
+		}
+	</style>
 
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
-<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
 
-<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
-<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link rel="icon" href="img/favicon.ico" type="image/gif" sizes="16x16">
 
 
-<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 			  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 			<![endif]-->
 </head>
+
 <body>
 
-<header id="header" class="transparent-navbar">
+	<header id="header" class="transparent-navbar">
 
-<div class="container">
+		<div class="container">
 
-<div class="navbar-header">
+			<div class="navbar-header">
 
-<div class="navbar-brand">
-<a class="logo" href="index.html">
-<img class="logo-img" src="img/logo.png" alt="logo">
-<img class="logo-alt-img" src="img/logo-alt.png" alt="logo">
-</a>
-</div>
+				<div class="navbar-brand">
+					<a class="logo">
+						<img class="logo-img" src="img/logo.png" alt="logo">
+						<img class="logo-alt-img" src="img/logo.png" alt="logo">
+					</a>
+				</div>
 
 
-<button class="navbar-toggle">
-<i class="fa fa-bars"></i>
-</button>
+				<button class="navbar-toggle">
+					<i class="fa fa-bars"></i>
+				</button>
 
-</div>
+			</div>
 
 
-<nav id="nav">
-<ul class="main-nav nav navbar-nav navbar-right">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#schedule">Schedule</a></li>
-<li><a href="#speakers">Speakers</a></li>
-<li><a href="#sponsors">Sponsors</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-</nav>
+			<nav id="nav">
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#schedule">Schedule</a></li>
+					<!-- <li><a href="#announcements">Announcements</a></li> -->
+					<li><a href="#speakers">Judges</a></li>
+					<!-- <li><a href="#sponsors">Sponsors</a></li> -->
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="{% url 'login' %}">Login</a></li>
+				</ul>
+			</nav>
 
-</div>
+		</div>
 
-</header>
+	</header>
 
 
-<div id="home">
+	<div id="home">
 
-<div class="section-bg" style="background-image:url(img/background01.jpg)" data-stellar-background-ratio="0.5"></div>
+		<div class="section-bg" style="background-image:url({% static 'competition/img/bg.jpeg' %})" data-stellar-background-ratio="0.5">
+		</div>
 
 
-<div class="home-wrapper">
+		<div class="home-wrapper">
 
-<div class="container">
+			<div class="container">
 
-<div class="row">
+				<div class="row">
 
-<div class="col-md-8 col-md-offset-2">
-<div class="home-content">
-<h1>Lorem ipsum dolor sit amet</h1>
-<h4 class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
-<a href="#" class="main-btn">Buy Ticket</a>
-</div>
-</div>
+					<div class="col-md-8">
+						<div class="home-content">
+							<h1>PITCHERS 5.0</h1>
+							<h4 class="lead" style="text-align: justify;">Research, ideate and explore the arena of emerging startups. Its your chance to influence the world through your business acumen and let your budding ideas thrive in this arena.</h4>
+							<a href="{% url 'register' %}" class="main-btn">Register Now</a>
+						</div>
+					</div>
 
-</div>
+				</div>
 
-</div>
+			</div>
 
-</div>
+		</div>
 
-</div>
+	</div>
 
 
-<div id="about" class="section">
+	<div id="about" class="section" style="background-color: #f9f9fa;">
 
-<div class="container">
+		<div class="container">
 
-<div class="row">
+			<div class="row">
 
-<div class="section-title">
-<h3 class="title"><span>About</span> <span style="color: #dd0a37;">Event</span></h3>
-</div>
+				<div class="section-title">
+					<h3 class="title"><span style="color: #434273;">About the</span> <span style="color: #939ba7;">Event</span></h3>
+				</div>
 
-<div class="col-md-8 col-md-offset-2 text-center">
+				<div class="col-md-8 col-md-offset-2 text-center">
 
-<div class="about-content">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+					<div class="about-content" style="text-align: justify;">
+						<p>Pitchers is the annual flagship event of the Entrepreneurship Development Cell wherein students who are yet to dive into the testing waters with their own startup ideas are provided with a mock simulation of strategies adopted by already successful startups. It includes telling about the main arena of work / services of the startup, past activities and ongoing activities of the startup, and future expectations and ideas of the same. Students are divided into teams and each team with a different case study who will then compete and win the overall event just on the basis of pitching.</p>
+					</div>
 
 
-<div id="numbers">
+					<div id="numbers">
 
-<div class="row">
+						<div class="row">
 
-<div class="col-md-3 col-sm-3 col-xs-6">
-<div class="number">
-<h3><span class="counter" data-from="0" data-to="900" data-speed="1500">0</span>+</h3>
-<p>Hours</p>
-</div>
-</div>
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="number">
+									<h3 id="day">
+									</h3>
+									<p>Days</p>
+								</div>
+							</div>
 
 
-<div class="col-md-3 col-sm-3 col-xs-6">
-<div class="number">
-<h3><span class="counter" data-from="0" data-to="750" data-speed="1500">0</span>+</h3>
-<p>Venues</p>
-</div>
-</div>
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="number">
+									<h3 id="hour">
+									</h3>
+									<p>Hours</p>
+								</div>
+							</div>
 
 
-<div class="col-md-3 col-sm-3 col-xs-6">
-<div class="number">
-<h3><span class="counter" data-from="0" data-to="50" data-speed="1500">0</span>+</h3>
-<p>Country</p>
-</div>
-</div>
-
-
-<div class="col-md-3 col-sm-3 col-xs-6">
-<div class="number">
-<h3><span class="counter" data-from="0" data-to="20" data-speed="1500">0</span>+</h3>
-<p>Speakers</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-<div id="galery">
-
-<div class="container">
-
-<div class="row">
-
-<div id="galery-owl" class="owl-carousel owl-theme">
-
-<div class="galery-item">
-<img src="img/galery01.jpg" alt="">
-</div>
-
-
-<div class="galery-item">
-<img src="img/galery02.jpg" alt="">
-</div>
-
-
-<div class="galery-item">
-<img src="img/galery03.jpg" alt="">
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="video-cta" class="section">
-
-<div class="section-bg" style="background-image:url(img/background02.jpg)" data-stellar-background-ratio="0.5"></div>
-
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-md-8 col-md-offset-2">
-<div class="cta-content text-center">
-<a class="video-play" href="#">
-<i class="fa fa-play"></i>
-</a>
-<h2>Watch this video</h2>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="schedule" class="section">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-title">
-<h3 class="title"><span>Event</span> <span style="color: #dd0a37;">Schedule</span></h3>
-</div>
-
-<div class="col-md-8 col-md-offset-2">
-<div class="events-wrapper">
-
-<div class="event">
-<div class="event-day">
-<div>
-<span class="day">15</span>
-<span class="year">Feb, 2018</span>
-</div>
-</div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-hour"></div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">Perpetua consectetuer definitiones id sea, mei utinam eripuit ne</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-hour"></div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-day">
-<div>
-<span class="day">16</span>
-<span class="year">Feb, 2018</span>
-</div>
-</div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-hour"></div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-day">
-<div>
-<span class="day">17</span>
-<span class="year">Feb, 2018</span>
-</div>
-</div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-
-<div class="event">
-<div class="event-hour"></div>
-<div class="event-content">
-<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<p>By <a href="#">John Doe</a></p>
-</div>
-</div>
-
-</div>
-<div class="download-btn">
-<a href="#" class="main-btn">Download Schedule</a>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-<div id="speakers" class="section">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-title">
-<h3 class="title"><span>Our</span> <span style="color: #dd0a37;">Speakers</span></h3>
-</div>
-
-
-<div class="col-md-4 col-sm-6">
-<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
-<div class="speaker-img">
-<img src="img/speaker01.jpg" alt="">
-</div>
-<div class="speaker-body">
-<div class="speaker-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa fa-linkedin"></i></a>
-</div>
-<div class="speaker-content">
-<h2>John Doe</h2>
-<span>Manager, CEO</span>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-4 col-sm-6">
-<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
-<div class="speaker-img">
-<img src="img/speaker02.jpg" alt="">
-</div>
-<div class="speaker-body">
-<div class="speaker-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa fa-linkedin"></i></a>
-</div>
-<div class="speaker-content">
-<h2>John Doe</h2>
-<span>Manager, CEO</span>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="col-md-4 col-sm-6">
-<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
-<div class="speaker-img">
-<img src="img/speaker03.jpg" alt="">
-</div>
-<div class="speaker-body">
-<div class="speaker-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa fa-linkedin"></i></a>
-</div>
-<div class="speaker-content">
-<h2>John Doe</h2>
-<span>Manager, CEO</span>
-</div>
-</div>
-</div>
-</div>
-
-
-<div id="speaker-modal-1" class="speaker-modal modal fade">
-<div class="modal-dialog">
-<div class="modal-content">
-<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
-<div class="modal-body">
-<div class="row">
-<div class="col-md-5">
-<div class="speaker-modal-img">
-<img src="img/speaker-info.jpg" alt="">
-</div>
-</div>
-<div class="col-md-7">
-<div class="speaker-modal-content">
-<h2 class="speaker-name">John Doe</h2>
-<span class="speaker-job">- Manager, CEO</span>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<div class="speaker-website">
-<h4>Website</h4>
-<a href="#">www.johndoe.com</a>
-</div>
-<div class="speaker-social">
-<h4>Social Profile</h4>
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa fa-linkedin"></i></a>
-</div>
-<div class="speaker-events">
-<h4>Sessions</h4>
-<div class="speaker-event">
-<span><strong>Day 1 -</strong> February 20, 2018 8 : 00 AM - 11 : 00 AM</span>
-<p>His id altera fabellas facilisis. Has eros assueverit cu</p>
-</div>
-<div class="speaker-event">
-<span><strong>Day 2 -</strong> February 20, 2018 8 : 00 AM - 11 : 00 AM</span>
-<p>At mucius deserunt delicatissimi eam, labitur detraxit ut sit</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="sponsors" class="section">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-title">
-<h3 class="title"><span>Our</span> <span style="color: #dd0a37;">Sponsors</span></h3>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-
-<div class="col-md-3 col-sm-4 col-xs-6">
-<a href="#" class="sponsor">
-<img src="img/sponsor.png" alt="">
-</a>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="cta" class="section">
-
-<div class="section-bg" style="background-image:url(img/background03.jpg)" data-stellar-background-ratio="0.5"></div>
-
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-md-8 col-md-offset-2">
-<div class="cta-content text-center">
-<h2>Get Ticket Now!</h2>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<a href="#" class="main-btn">Buy Ticket</a>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div id="contact" class="section">
-
-<div class="container">
-
-<div class="row">
-
-<div class="section-title">
-<h3 class="title"><span>Contact</span> <span style="color: #dd0a37;">Info</span></h3>
-</div>
-
-
-<div class="col-sm-4">
-<div class="contact">
-<h3>Address</h3>
-<p>2635 Simons Hollow Road, NEW YORK</p>
-</div>
-</div>
-
-
-<div class="col-sm-4">
-<div class="contact">
-<h3>Phone</h3>
-<p>570-751-2415</p>
-</div>
-</div>
-
-
-<div class="col-sm-4">
-<div class="contact">
-<h3>Email</h3>
-<a href="#"><span class="__cf_email__" data-cfemail="f39685969d87b3808683839c8187dd909c9e">[email&#160;protected]</span></a>
-</div>
-</div>
-
-</div>
-
-</div>
-
-
-<div id="map"></div>
-
-</div>
-
-
-<footer id="footer">
-
-<div class="container">
-
-<div class="row">
-
-<div class="col-md-4 col-md-push-4">
-<div class="footer-brand">
-<a class="logo" href="index.html">
-<img class="logo-img" src="img/logo.png" alt="logo">
-</a>
-</div>
-</div>
-
-
-<div class="col-md-4 col-md-push-4">
-<div class="contact-social">
-<a href="#"><i class="fa fa-facebook"></i></a>
-<a href="#"><i class="fa fa-twitter"></i></a>
-<a href="#"><i class="fa fa-google-plus"></i></a>
-<a href="#"><i class="fa fa-instagram"></i></a>
-<a href="#"><i class="fa fa-pinterest"></i></a>
-<a href="#"><i class="fa fa fa-linkedin"></i></a>
-</div>
-</div>
-
-
-<div class="col-md-4 col-md-pull-8">
-<span class="copyright">
-Copyright &copy;<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-</span>
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="js/google-map.js"></script>
-<script src="js/jquery.countTo.js"></script>
-<script src="js/main.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="number">
+									<h3 id="minute">
+									</h3>
+									<p>Minutes</p>
+								</div>
+							</div>
+
+
+							<div class="col-md-3 col-sm-3 col-xs-6">
+								<div class="number">
+									<h3 id="second">
+									</h3>
+									<p>Seconds</p>
+								</div>
+							</div>
+
+						</div>
+						<script>
+							function countdown() {
+								var now = new Date();
+								var over_time = new Date("November 08, 2020 09:00:01");
+				
+								var now_time = now.getTime();
+								var over = over_time.getTime();
+								var end_time = over - now_time;
+				
+								var days = Math.floor(end_time / (1000 * 60 * 60 * 24));
+								var hours = Math.floor((end_time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+								var minutes = Math.floor((end_time % (1000 * 60 * 60)) / (1000 * 60));
+								var seconds = Math.floor((end_time % (1000 * 60)) / 1000);
+								if (hours < "10") { hours = "0" + hours; }
+								if (minutes < "10") { minutes = "0" + minutes; }
+								if (seconds < "10") { seconds = "0" + seconds; } 
+				
+								console.log(days)
+							
+								document.getElementById("day").innerHTML = days;
+								document.getElementById("hour").innerHTML = hours;
+								document.getElementById("minute").innerHTML = minutes;
+								document.getElementById("second").innerHTML = seconds;
+				
+								setTimeout(countdown, 1000);
+				
+							}
+							countdown();
+						</script>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	
+
+	<div id="cta" class="section">
+
+		<div class="section-bg" style="background-image:url({% static 'competition/img/background03.jpg' %})" data-stellar-background-ratio="0.5">
+		</div>
+
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="cta-content text-center">
+						<h2>Registrations Open!</h2>
+						<!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+							incididunt
+							ut labore et dolore magna aliqua.</p> -->
+						<a href="{% url 'register' %}" class="main-btn">Register Now</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="schedule" class="section">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-title">
+					<h3 class="title"><span style="color: #434273;">Event</span> <span style="color: #939ba7;">Schedule</span></h3>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="events-wrapper">
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">31</span>
+									<span class="year">Oct, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Registrations Begin</h3>
+								<p>It’s time to get in the game! <br>
+									Register to get in the gamble. <br>
+									And don’t forget to connect with us on our discord channel where you will get updates for our event and have a chance to get familiar with your fellows. <br>
+								<a href="https://discord.gg/NrG79Wxt" target="_blank">https://discord.gg/NrG79Wxt</a> </p>
+								
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">3</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Team Allotment Begins</h3>
+								<p>It’s time to make your crew. <br>
+									Now that you’ve registered individually, select your team members. For those who are unable to form their groups, it’ll be our responsibility to allot the teams to them!  </p>
+								
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+
+						<!-- <div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
+								<h3 class="event-title">Perpetua consectetuer definitiones id sea, mei utinam eripuit ne
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+									et dolore magna aliqua.</p>
+								<p>By <a href="#">John Doe</a></p>
+							</div>
+						</div>
+
+
+						<div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
+								<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+									et dolore magna aliqua.</p>
+								<p>By <a href="#">John Doe</a></p>
+							</div>
+						</div> -->
+
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">6</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Registrations Close</h3>
+								<p>Registrations are done, teams are formed. Sit back and wait for what’s to come, for it is going to be a mind-boggling adventure.</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+
+						<!-- <div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
+								<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+									et dolore magna aliqua.</p>
+								<p>By <a href="#">John Doe</a></p>
+							</div>
+						</div> -->
+
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">7</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Pre Event Day</h3>
+								<p>It's time for the warm up round before the main battle. It's to make you aware about what you are up for.<br>
+									It's time for the pre- event</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">8</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Main Event Day</h3>
+								<p>Companies have been alloted, Challenges have been explained, Judges are seated. It's time for the final pitching battle to start.
+									<br>It's the main day</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+
+						<!-- <div class="event">
+							<div class="event-hour"></div>
+							<div class="event-content">
+								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
+								<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit
+								</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore
+									et dolore magna aliqua.</p>
+								<p>By <a href="#">John Doe</a></p>
+							</div>
+						</div> -->
+
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	
+	<!-- <div id="video-cta" class="section">
+
+		<div class="section-bg" data-stellar-background-ratio="0.5">
+		</div>
+
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+				<div class="col-md-8 col-md-offset-2">
+					<div>
+						<video style="width: 100%; height: 100%;" controls>
+							<source src="{% static 'competition/img/movie.mp4' %}" type="video/mp4" />
+						</video>
+						<!-- <a class="video-play" href="#">
+							<i class="fa fa-play"></i>
+						</a>
+						<h2>Watch this video</h2>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+							incididunt
+							ut labore et dolore magna aliqua.</p> -->
+					<!-- </div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div> --> 
+
+
+	
+	<!-- <div id="announcements" class="section">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-title">
+					<h3 class="title"><span>Announcements</span> <span style="color: #434273;"></span></h3>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 7th November 2020</p>
+							<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 7th November 2020</p>
+							<h3 class="event-title">Perpetua consectetuer definitiones id sea, mei utinam eripuit ne
+							</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 7th November 2020</p>
+							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
+							<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
+							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
+							<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-8 col-md-offset-2">
+					<div class="event">
+
+						<div class="event-content">
+							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
+							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et
+								dolore magna aliqua.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+
+	<div id="speakers" class="section">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-title">
+					<h3 class="title"><span style="color: #434273;">Our</span> <span style="color: #939ba7;">Judges</span></h3>
+				</div>
+
+
+				<div class="col-md-4 col-sm-6">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
+						<div class="speaker-img">
+							<img src="img/speaker03.jpg" alt="">
+						</div>
+						<div class="speaker-body">
+							<!-- <div class="speaker-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa fa-linkedin"></i></a>
+							</div> -->
+							<div class="speaker-content">
+								<h2 style="text-align: center;">Will be</h2>
+								<!-- <span>Manager, CEO</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 col-sm-6">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
+						<div class="speaker-img">
+							<img src="img/speaker02.jpg" alt="">
+						</div>
+						<div class="speaker-body">
+							<!-- <div class="speaker-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa fa-linkedin"></i></a>
+							</div> -->
+							<div class="speaker-content">
+								<h2 style="text-align: center;">Revealed</h2>
+								<!-- <span>Manager, CEO</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 col-sm-6">
+					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
+						<div class="speaker-img">
+							<img src="img/speaker01.jpg" alt="">
+						</div>
+						<div class="speaker-body">
+							<!-- <div class="speaker-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="#"><i class="fa fa fa-linkedin"></i></a>
+							</div> -->
+							<div class="speaker-content">
+								<h2 style="text-align: center;">Soon</h2>
+								<!-- <span>Manager, CEO</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- <div id="speaker-modal-1" class="speaker-modal modal fade">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="speaker-modal-img">
+											<img src="img/speaker-info.jpg" alt="">
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="speaker-modal-content">
+											<h2 class="speaker-name">John Doe</h2>
+											<span class="speaker-job">- Manager, CEO</span>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut
+												labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+												exercitation ullamco
+												laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+												irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+												fugiat nulla pariatur.
+												Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+												officia deserunt mollit anim
+												id est laborum.</p>
+											<div class="speaker-website">
+												<h4>Website</h4>
+												<a href="#">www.johndoe.com</a>
+											</div>
+											<div class="speaker-social">
+												<h4>Social Profile</h4>
+												<a href="#"><i class="fa fa-facebook"></i></a>
+												<a href="#"><i class="fa fa-twitter"></i></a>
+												<a href="#"><i class="fa fa-instagram"></i></a>
+												<a href="#"><i class="fa fa fa-linkedin"></i></a>
+											</div>
+											<div class="speaker-events">
+												<h4>Sessions</h4>
+												<div class="speaker-event">
+													<span><strong>Day 1 -</strong> February 20, 2018 8 : 00 AM - 11 : 00
+														AM</span>
+													<p>His id altera fabellas facilisis. Has eros assueverit cu</p>
+												</div>
+												<div class="speaker-event">
+													<span><strong>Day 2 -</strong> February 20, 2018 8 : 00 AM - 11 : 00
+														AM</span>
+													<p>At mucius deserunt delicatissimi eam, labitur detraxit ut sit</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- <div id="sponsors" class="section">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-title">
+					<h3 class="title"><span>Our</span> <span style="color: #434273;">Sponsors</span></h3>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+
+				<div class="col-md-3 col-sm-4 col-xs-6">
+					<a href="#" class="sponsor">
+						<img src="img/sponsor.png" alt="">
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div> -->
+
+	
+
+	<div id="gallery">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="section-title">
+					<br>
+					<h3 class="title"><span style="color: #434273;">Gallery</span></h3>
+				</div>
+
+				<div id="galery-owl" class="owl-carousel owl-theme">
+
+					<div class="galery-item">
+						<img src="img/p1.JPG" alt="">
+					</div>
+
+
+					<div class="galery-item">
+						<img src="img/p2.JPG" alt="">
+					</div>
+
+
+					<div class="galery-item">
+						<img src="img/p3.JPG" alt="">
+					</div>
+
+					<div class="galery-item">
+						<img src="img/p4.JPG" alt="">
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="contact" class="section" style="background-color: #f9f9fa;">
+
+		<div class="container">
+
+			<div class="row">
+
+				<div class="section-title">
+					<h3 class="title"><span style="color: #434273 ;">Contact</span> <span style="color: #939ba7;">Info</span></h3>
+				</div>
+
+
+				<div class="col-sm-4">
+					<div class="contact">
+						<h3>Address</h3>
+						<a href="https://g.page/ThaparInstitute?share" target="_blank">
+							<p style="font-weight: bold;" onmouseover="this.style.color='#434273';" onmouseout="this.style.color='black';">Thapar Institute of Engineering and Technology, Patiala</p>
+						</a>
+					</div>
+				</div>
+
+
+				<div class="col-sm-4">
+					<div class="contact">
+						<h3>Phone</h3>
+						<p style="font-weight: bold;">Jashan Pahwa: <a href="tel:8950508923">+91 8950508923</a> <br> Rishab Jain: <a href="tel:9754788067">+91 9754788067</p>
+					</div>
+				</div>
+
+
+				<div class="col-sm-4">
+					<div class="contact">
+						<h3>Email</h3>
+						<a href="mailto:pitchers@edctiet.com">
+							<p style="font-weight: bold;" onmouseover="this.style.color='#434273';" onmouseout="this.style.color='black';">pitchers@edctiet.com</p>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<!-- <div id="map"></div> -->
+
+	</div>
+
+
+	<footer id="footer" style="background-color: #f9f9fa;">
+
+		<div class="container">
+
+			<div class="row disp-md-flex">
+
+				<div class="col-md-4 col-md-push-4">
+					<div class="footer-brand">
+						<a class="" href="https://www.edctiet.com/">
+							<img class="" style="width: 295px; height: 180px;" src="img/logo.png" alt="logo">
+						</a>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 col-md-push-4">
+					<div class="contact-social">
+						<a href="https://www.facebook.com/tuedcell/"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/edctiet"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.instagram.com/edc_tiet/"><i class="fa fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/"><i class="fa fa fa-linkedin"></i></a>
+					</div>
+				</div>
+
+
+				<div class="col-md-4 col-md-pull-8">
+					<span class="copyright">
+						Copyright &copy;
+						2020-21 All Rights Reserved.<br> Created by <a href="https://www.edctiet.com/tech-team/">EDC-TIET</a>
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+
+
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+	<script src="js/google-map.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/main.js"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
 </body>
 
 <!-- Mirrored from colorlib.com/preview/theme/event/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Oct 2020 16:41:19 GMT -->
+
 </html>
