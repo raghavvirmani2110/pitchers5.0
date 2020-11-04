@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link rel="icon" href="img/favicon.ico" type="image/gif" sizes="16x16">
 
 
 	<!--[if lt IE 9]>
@@ -46,9 +47,9 @@
 			<div class="navbar-header">
 
 				<div class="navbar-brand">
-					<a class="logo" href="index.html">
+					<a class="logo">
 						<img class="logo-img" src="img/logo.png" alt="logo">
-						<img class="logo-alt-img" src="img/logo-alt.png" alt="logo">
+						<img class="logo-alt-img" src="img/logo.png" alt="logo">
 					</a>
 				</div>
 
@@ -65,11 +66,12 @@
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#schedule">Schedule</a></li>
-					<li><a href="#announcements">Announcements</a></li>
-					<li><a href="#speakers">Speakers</a></li>
-					<li><a href="#sponsors">Sponsors</a></li>
+					<!-- <li><a href="#announcements">Announcements</a></li> -->
+					<li><a href="#speakers">Judges</a></li>
+					<!-- <li><a href="#sponsors">Sponsors</a></li> -->
+					<li><a href="#gallery">Gallery</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<!-- <li><a href="blog.html">Blog</a></li> -->
+					<li><a href="{% url 'login' %}">Login</a></li>
 				</ul>
 			</nav>
 
@@ -80,7 +82,7 @@
 
 	<div id="home">
 
-		<div class="section-bg" style="background-image:url(img/background01.jpg)" data-stellar-background-ratio="0.5">
+		<div class="section-bg" style="background-image:url({% static 'competition/img/bg.jpeg' %})" data-stellar-background-ratio="0.5">
 		</div>
 
 
@@ -90,13 +92,11 @@
 
 				<div class="row">
 
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-8">
 						<div class="home-content">
 							<h1>PITCHERS 5.0</h1>
-							<h4 class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor
-								incididunt ut labore et dolore magna aliqua.</h4>
-							<a href="#" class="main-btn">Register Now</a>
+							<h4 class="lead" style="text-align: justify;">Research, ideate and explore the arena of emerging startups. Its your chance to influence the world through your business acumen and let your budding ideas thrive in this arena.</h4>
+							<a href="{% url 'register' %}" class="main-btn">Register Now</a>
 						</div>
 					</div>
 
@@ -109,28 +109,20 @@
 	</div>
 
 
-	<div id="about" class="section">
+	<div id="about" class="section" style="background-color: #f9f9fa;">
 
 		<div class="container">
 
 			<div class="row">
 
 				<div class="section-title">
-					<h3 class="title"><span>About</span> <span style="color: #dd0a37;">Event</span></h3>
+					<h3 class="title"><span style="color: #434273;">About the</span> <span style="color: #939ba7;">Event</span></h3>
 				</div>
 
 				<div class="col-md-8 col-md-offset-2 text-center">
 
-					<div class="about-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-							labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-							ut aliquip ex
-							ea commodo consequat. Duis aute irure
-							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							Excepteur sint
-							occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-							laborum.</p>
+					<div class="about-content" style="text-align: justify;">
+						<p>Pitchers is the annual flagship event of the Entrepreneurship Development Cell wherein students who are yet to dive into the testing waters with their own startup ideas are provided with a mock simulation of strategies adopted by already successful startups. It includes telling about the main arena of work / services of the startup, past activities and ongoing activities of the startup, and future expectations and ideas of the same. Students are divided into teams and each team with a different case study who will then compete and win the overall event just on the basis of pitching.</p>
 					</div>
 
 
@@ -177,29 +169,29 @@
 						<script>
 							function countdown() {
 								var now = new Date();
-								var over_time = new Date("November 08, 2020 09:00:00");
-				
+								var over_time = new Date("November 08, 2020 09:00:01");
+
 								var now_time = now.getTime();
 								var over = over_time.getTime();
 								var end_time = over - now_time;
-				
+
 								var days = Math.floor(end_time / (1000 * 60 * 60 * 24));
 								var hours = Math.floor((end_time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 								var minutes = Math.floor((end_time % (1000 * 60 * 60)) / (1000 * 60));
 								var seconds = Math.floor((end_time % (1000 * 60)) / 1000);
 								if (hours < "10") { hours = "0" + hours; }
 								if (minutes < "10") { minutes = "0" + minutes; }
-								if (seconds < "10") { seconds = "0" + seconds; } 
-				
+								if (seconds < "10") { seconds = "0" + seconds; }
+
 								console.log(days)
-							
+
 								document.getElementById("day").innerHTML = days;
 								document.getElementById("hour").innerHTML = hours;
 								document.getElementById("minute").innerHTML = minutes;
 								document.getElementById("second").innerHTML = seconds;
-				
+
 								setTimeout(countdown, 1000);
-				
+
 							}
 							countdown();
 						</script>
@@ -214,11 +206,11 @@
 	</div>
 
 
-	
+
 
 	<div id="cta" class="section">
 
-		<div class="section-bg" style="background-image:url(img/background03.jpg)" data-stellar-background-ratio="0.5">
+		<div class="section-bg" style="background-image:url({% static 'competition/img/background03.jpg' %})" data-stellar-background-ratio="0.5">
 		</div>
 
 
@@ -229,10 +221,10 @@
 				<div class="col-md-8 col-md-offset-2">
 					<div class="cta-content text-center">
 						<h2>Registrations Open!</h2>
-						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						<!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt
-							ut labore et dolore magna aliqua.</p>
-						<a href="#" class="main-btn">Register Now</a>
+							ut labore et dolore magna aliqua.</p> -->
+						<a href="{% url 'register' %}" class="main-btn">Register Now</a>
 					</div>
 				</div>
 
@@ -251,7 +243,7 @@
 			<div class="row">
 
 				<div class="section-title">
-					<h3 class="title"><span>Event</span> <span style="color: #dd0a37;">Schedule</span></h3>
+					<h3 class="title"><span style="color: #434273;">Event</span> <span style="color: #939ba7;">Schedule</span></h3>
 				</div>
 
 				<div class="col-md-8 col-md-offset-2">
@@ -260,22 +252,42 @@
 						<div class="event">
 							<div class="event-day">
 								<div>
-									<span class="day">15</span>
-									<span class="year">Feb, 2018</span>
+									<span class="day">31</span>
+									<span class="year">Oct, 2020</span>
 								</div>
 							</div>
 							<div class="event-content">
-								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-								<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore
-									et dolore magna aliqua.</p>
-								<p>By <a href="#">John Doe</a></p>
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Registrations Begin</h3>
+								<p>It’s time to get in the game! <br>
+									Register to get in the gamble. <br>
+									And don’t forget to connect with us on our discord channel where you will get updates for our event and have a chance to get familiar with your fellows. <br>
+								<a href="https://discord.gg/NrG79Wxt" target="_blank">https://discord.gg/NrG79Wxt</a> </p>
+
+								<!-- <p>By <a href="#">John Doe</a></p> -->
 							</div>
 						</div>
 
 
 						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">3</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Team Allotment Begins</h3>
+								<p>It’s time to make your crew. <br>
+									Now that you’ve registered individually, select your team members. For those who are unable to form their groups, it’ll be our responsibility to allot the teams to them!  </p>
+
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+
+						<!-- <div class="event">
 							<div class="event-hour"></div>
 							<div class="event-content">
 								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
@@ -287,8 +299,6 @@
 								<p>By <a href="#">John Doe</a></p>
 							</div>
 						</div>
-
-
 						<div class="event">
 							<div class="event-hour"></div>
 							<div class="event-content">
@@ -300,28 +310,26 @@
 									et dolore magna aliqua.</p>
 								<p>By <a href="#">John Doe</a></p>
 							</div>
-						</div>
+						</div> -->
 
 
 						<div class="event">
 							<div class="event-day">
 								<div>
-									<span class="day">16</span>
-									<span class="year">Feb, 2018</span>
+									<span class="day">6</span>
+									<span class="year">Nov, 2020</span>
 								</div>
 							</div>
 							<div class="event-content">
-								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-								<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore
-									et dolore magna aliqua.</p>
-								<p>By <a href="#">John Doe</a></p>
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Registrations Close</h3>
+								<p>Registrations are done, teams are formed. Sit back and wait for what’s to come, for it is going to be a mind-boggling adventure.</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
 							</div>
 						</div>
 
 
-						<div class="event">
+						<!-- <div class="event">
 							<div class="event-hour"></div>
 							<div class="event-content">
 								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
@@ -332,28 +340,43 @@
 									et dolore magna aliqua.</p>
 								<p>By <a href="#">John Doe</a></p>
 							</div>
-						</div>
+						</div> -->
 
 
 						<div class="event">
 							<div class="event-day">
 								<div>
-									<span class="day">17</span>
-									<span class="year">Feb, 2018</span>
+									<span class="day">7</span>
+									<span class="year">Nov, 2020</span>
 								</div>
 							</div>
 							<div class="event-content">
-								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
-								<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-									incididunt ut labore
-									et dolore magna aliqua.</p>
-								<p>By <a href="#">John Doe</a></p>
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Pre Event Day</h3>
+								<p>It's time for the warm up round before the main battle. It's to make you aware about what you are up for.<br>
+									It's time for the pre- event</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
+							</div>
+						</div>
+
+						<div class="event">
+							<div class="event-day">
+								<div>
+									<span class="day">8</span>
+									<span class="year">Nov, 2020</span>
+								</div>
+							</div>
+							<div class="event-content">
+								<!-- <p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p> -->
+								<h3 class="event-title">Main Event Day</h3>
+								<p>Companies have been alloted, Challenges have been explained, Judges are seated. It's time for the final pitching battle to start.
+									<br>It's the main day</p>
+								<!-- <p>By <a href="#">John Doe</a></p> -->
 							</div>
 						</div>
 
 
-						<div class="event">
+						<!-- <div class="event">
 							<div class="event-hour"></div>
 							<div class="event-content">
 								<p class="event-time"><i class="fa fa-clock-o"></i> 8 : 00 AM - 11 : 00 AM</p>
@@ -364,12 +387,10 @@
 									et dolore magna aliqua.</p>
 								<p>By <a href="#">John Doe</a></p>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
-					<div class="download-btn">
-						<a href="#" class="main-btn">Download Schedule</a>
-					</div>
+
 				</div>
 			</div>
 
@@ -377,47 +398,38 @@
 
 	</div>
 
-	
-	<div id="video-cta" class="section">
 
-		<div class="section-bg" style="background-image:url(img/background02.jpg)" data-stellar-background-ratio="0.5">
+	<!-- <div id="video-cta" class="section">
+		<div class="section-bg" data-stellar-background-ratio="0.5">
 		</div>
-
-
-		<div class="container">
-
+		<div class="container-fluid">
 			<div class="row">
-
 				<div class="col-md-8 col-md-offset-2">
-					<div class="cta-content text-center">
-						<a class="video-play" href="#">
+					<div>
+						<video style="width: 100%; height: 100%;" controls>
+							<source src="{% static 'competition/img/movie.mp4' %}" type="video/mp4" />
+						</video>
+						<!-- <a class="video-play" href="#">
 							<i class="fa fa-play"></i>
 						</a>
 						<h2>Watch this video</h2>
 						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 							incididunt
-							ut labore et dolore magna aliqua.</p>
-					</div>
+							ut labore et dolore magna aliqua.</p> -->
+					<!-- </div>
 				</div>
-
 			</div>
-
 		</div>
+	</div> -->
 
-	</div>
 
 
-	
-	<div id="announcements" class="section">
-
+	<!-- <div id="announcements" class="section">
 		<div class="container">
-
 			<div class="row">
-
 				<div class="section-title">
-					<h3 class="title"><span>Announcements</span> <span style="color: #dd0a37;"></span></h3>
+					<h3 class="title"><span>Announcements</span> <span style="color: #434273;"></span></h3>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
 						<div class="event-content">
@@ -430,12 +442,8 @@
 						</div>
 					</div>
 				</div>
-
-
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 7th November 2020</p>
 							<h3 class="event-title">Perpetua consectetuer definitiones id sea, mei utinam eripuit ne
@@ -447,10 +455,8 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 7th November 2020</p>
 							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
@@ -461,11 +467,8 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
 							<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
@@ -476,10 +479,8 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
 							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
@@ -490,10 +491,8 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
 							<h3 class="event-title">His id altera fabellas facilisis. Has eros assueverit cu</h3>
@@ -504,10 +503,8 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-md-8 col-md-offset-2">
 					<div class="event">
-
 						<div class="event-content">
 							<p class="event-time"><i class="fa fa-calendar-check-o"></i> 8th November 2020</p>
 							<h3 class="event-title">At mucius deserunt delicatissimi eam, labitur detraxit ut sit</h3>
@@ -520,7 +517,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 	<div id="speakers" class="section">
@@ -530,25 +527,25 @@
 			<div class="row">
 
 				<div class="section-title">
-					<h3 class="title"><span>Our</span> <span style="color: #dd0a37;">Judges</span></h3>
+					<h3 class="title"><span style="color: #434273;">Our</span> <span style="color: #939ba7;">Judges</span></h3>
 				</div>
 
 
 				<div class="col-md-4 col-sm-6">
 					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
 						<div class="speaker-img">
-							<img src="img/speaker01.jpg" alt="">
+							<img src="img/speaker03.jpg" alt="">
 						</div>
 						<div class="speaker-body">
-							<div class="speaker-social">
+							<!-- <div class="speaker-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
 								<a href="#"><i class="fa fa fa-linkedin"></i></a>
-							</div>
+							</div> -->
 							<div class="speaker-content">
-								<h2>John Doe</h2>
-								<span>Manager, CEO</span>
+								<h2 style="text-align: center;">Will be</h2>
+								<!-- <span>Manager, CEO</span> -->
 							</div>
 						</div>
 					</div>
@@ -561,15 +558,15 @@
 							<img src="img/speaker02.jpg" alt="">
 						</div>
 						<div class="speaker-body">
-							<div class="speaker-social">
+							<!-- <div class="speaker-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
 								<a href="#"><i class="fa fa fa-linkedin"></i></a>
-							</div>
+							</div> -->
 							<div class="speaker-content">
-								<h2>John Doe</h2>
-								<span>Manager, CEO</span>
+								<h2 style="text-align: center;">Revealed</h2>
+								<!-- <span>Manager, CEO</span> -->
 							</div>
 						</div>
 					</div>
@@ -579,25 +576,25 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
 						<div class="speaker-img">
-							<img src="img/speaker03.jpg" alt="">
+							<img src="img/speaker01.jpg" alt="">
 						</div>
 						<div class="speaker-body">
-							<div class="speaker-social">
+							<!-- <div class="speaker-social">
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
 								<a href="#"><i class="fa fa fa-linkedin"></i></a>
-							</div>
+							</div> -->
 							<div class="speaker-content">
-								<h2>John Doe</h2>
-								<span>Manager, CEO</span>
+								<h2 style="text-align: center;">Soon</h2>
+								<!-- <span>Manager, CEO</span> -->
 							</div>
 						</div>
 					</div>
 				</div>
 
 
-				<div id="speaker-modal-1" class="speaker-modal modal fade">
+				<!-- <div id="speaker-modal-1" class="speaker-modal modal fade">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<button type="button" class="speaker-modal-close" data-dismiss="modal"></button>
@@ -652,7 +649,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 
@@ -661,100 +658,86 @@
 	</div>
 
 
-	<div id="sponsors" class="section">
-
+	<!-- <div id="sponsors" class="section">
 		<div class="container">
-
 			<div class="row">
-
 				<div class="section-title">
-					<h3 class="title"><span>Our</span> <span style="color: #dd0a37;">Sponsors</span></h3>
+					<h3 class="title"><span>Our</span> <span style="color: #434273;">Sponsors</span></h3>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
-
 				<div class="col-md-3 col-sm-4 col-xs-6">
 					<a href="#" class="sponsor">
 						<img src="img/sponsor.png" alt="">
 					</a>
 				</div>
-
 			</div>
-
 		</div>
+	</div> -->
 
-	</div>
 
-	
 
-	<div id="galery">
+	<div id="gallery">
 
 		<div class="container">
 
 			<div class="row">
+				<div class="section-title">
+					<br>
+					<h3 class="title"><span style="color: #434273;">Gallery</span></h3>
+				</div>
 
 				<div id="galery-owl" class="owl-carousel owl-theme">
 
 					<div class="galery-item">
-						<img src="img/galery01.jpg" alt="">
+						<img src="img/p1.JPG" alt="">
 					</div>
 
 
 					<div class="galery-item">
-						<img src="img/galery02.jpg" alt="">
+						<img src="img/p2.JPG" alt="">
 					</div>
 
 
 					<div class="galery-item">
-						<img src="img/galery03.jpg" alt="">
+						<img src="img/p3.JPG" alt="">
+					</div>
+
+					<div class="galery-item">
+						<img src="img/p4.JPG" alt="">
 					</div>
 
 				</div>
@@ -766,21 +749,140 @@
 	</div>
 
 
-	<div id="contact" class="section">
+
+  <section class="faq-section">
+  <div class="container">
+    <div class="row">
+                      <!-- ***** FAQ Start ***** -->
+                      <div class="col-md-6 offset-md-3">
+
+                          <div class="faq-title text-center pb-3">
+                              <h2>FAQ</h2>
+                          </div>
+                      </div>
+                      <div class="col-md-6 offset-md-3">
+                          <div class="faq" id="accordion">
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-1">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
+                                              <span class="badge">1</span>Can Non-Thapar Students participate as well?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>Yes,the registrations are open for Non-Thapar students at a nominal fees of Rs 100. </p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-2">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2" data-aria-expanded="false" data-aria-controls="faqCollapse-2">
+                                              <span class="badge">2</span> Is individual participation allowed?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>You can register individually if you do not have a team, and we will sort you into a team for the competition.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-3">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3" data-aria-expanded="false" data-aria-controls="faqCollapse-3">
+                                              <span class="badge">3</span>Is there any registration fees?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>There is no registration fees for Thapar students while a registration fees of Rs. 100 is present for non-thapar students.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-4">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4" data-aria-expanded="false" data-aria-controls="faqCollapse-4">
+                                              <span class="badge">4</span> Can second year students participate as well?
+
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>Any student, having passed school, enrolled in a college or university for higher education, can participate.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-5">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5" data-aria-expanded="false" data-aria-controls="faqCollapse-5">
+                                              <span class="badge">5</span> Do we have to prepare a pitch before joining the competition?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p> There is no need to prepare it before hand as your pitch will be dependent upon the company that you are assigned.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-6">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-6" data-aria-expanded="false" data-aria-controls="faqCollapse-6">
+                                              <span class="badge">6</span> Who will be sitting in the panel of judges?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-6" class="collapse" aria-labelledby="faqHeading-6" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>We will be having a number of entrepreneurs and public speakers in our jury.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" id="faqHeading-7">
+                                      <div class="mb-0">
+                                          <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
+                                              <span class="badge">7</span>What exactly will happen during the pitchers competition?
+                                          </h5>
+                                      </div>
+                                  </div>
+                                  <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7" data-parent="#accordion">
+                                      <div class="card-body">
+                                          <p>Pitchers is a case study based, business planning and pitching competition. All participants will be divided into teams (if they are already not a part of one) and provided one case study (per team). You will have to create a pitch and a presentation, to pitch your company to potential investors, present ie our panel of judges.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </section>
+	<div id="contact" class="section" style="background-color: #f9f9fa;">
 
 		<div class="container">
 
 			<div class="row">
 
 				<div class="section-title">
-					<h3 class="title"><span>Contact</span> <span style="color: #dd0a37;">Info</span></h3>
+					<h3 class="title"><span style="color: #434273 ;">Contact</span> <span style="color: #939ba7;">Info</span></h3>
 				</div>
 
 
 				<div class="col-sm-4">
 					<div class="contact">
 						<h3>Address</h3>
-						<p>2635 Simons Hollow Road, NEW YORK</p>
+						<a href="https://g.page/ThaparInstitute?share" target="_blank">
+							<p style="font-weight: bold;" onmouseover="this.style.color='#434273';" onmouseout="this.style.color='black';">Thapar Institute of Engineering and Technology, Patiala</p>
+						</a>
 					</div>
 				</div>
 
@@ -788,7 +890,7 @@
 				<div class="col-sm-4">
 					<div class="contact">
 						<h3>Phone</h3>
-						<p>570-751-2415</p>
+						<p style="font-weight: bold;">Jashan Pahwa: <a href="tel:8950508923">+91 8950508923</a> <br> Rishab Jain: <a href="tel:9754788067">+91 9754788067</p>
 					</div>
 				</div>
 
@@ -796,8 +898,9 @@
 				<div class="col-sm-4">
 					<div class="contact">
 						<h3>Email</h3>
-						<a href="#"><span class="__cf_email__"
-								data-cfemail="f39685969d87b3808683839c8187dd909c9e">[email&#160;protected]</span></a>
+						<a href="mailto:pitchers@edctiet.com">
+							<p style="font-weight: bold;" onmouseover="this.style.color='#434273';" onmouseout="this.style.color='black';">pitchers@edctiet.com</p>
+						</a>
 					</div>
 				</div>
 
@@ -811,16 +914,16 @@
 	</div>
 
 
-	<footer id="footer">
+	<footer id="footer" style="background-color: #f9f9fa;">
 
 		<div class="container">
 
-			<div class="row">
+			<div class="row disp-md-flex">
 
 				<div class="col-md-4 col-md-push-4">
 					<div class="footer-brand">
-						<a class="logo" href="index.html">
-							<img class="logo-img" src="img/logo.png" alt="logo">
+						<a class="" href="https://www.edctiet.com/">
+							<img class="" style="width: 295px; height: 180px;" src="img/logo.png" alt="logo">
 						</a>
 					</div>
 				</div>
@@ -828,12 +931,10 @@
 
 				<div class="col-md-4 col-md-push-4">
 					<div class="contact-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa fa-linkedin"></i></a>
+						<a href="https://www.facebook.com/tuedcell/"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/edctiet"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.instagram.com/edc_tiet/"><i class="fa fa-instagram"></i></a>
+						<a href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/"><i class="fa fa fa-linkedin"></i></a>
 					</div>
 				</div>
 
@@ -841,12 +942,7 @@
 				<div class="col-md-4 col-md-pull-8">
 					<span class="copyright">
 						Copyright &copy;
-						<script data-cfasync="false"
-							src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with
-						<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/"
-							target="_blank">Colorlib</a>
+						2020-21 All Rights Reserved.<br> Created by <a href="https://www.edctiet.com/tech-team/">EDC-TIET</a>
 					</span>
 				</div>
 
@@ -855,6 +951,9 @@
 		</div>
 
 	</footer>
+
+
+
 
 
 	<script src="js/jquery.min.js"></script>
@@ -866,6 +965,9 @@
 	<script src="js/google-map.js"></script>
 	<script src="js/jquery.countTo.js"></script>
 	<script src="js/main.js"></script>
+  <script src='https://code.jquery.com/jquery-2.1.0.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
